@@ -1,3 +1,24 @@
 .App {
   text-align: center;
 }
+
+.counterOutput {
+  height: 50px;
+  text-align: center;
+  background: aqua;
+}
+
+.counterControl {
+  margin-left: 15%;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.button {
+  color: red;
+  background: beige;
+}
+.button:hover {
+  color: magenta;
+  background: black;
+}
