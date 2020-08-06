@@ -12,6 +12,12 @@ const reducer = (state = initialState, action) => {
         ...state,
         results: state.results.concat({ id: new Date(), value: action.result }),
       };
+
+    /* in the common reducer value : state.counter is available but here state.ctrRed.counter will not
+        work because in this reducer it does not have access to the global state but only to the state of 
+        its own reducer-state , so if we are in a reducer and need some value from global state then we 
+        can only get it from the actionPayload
+    */
     case actionTypes.DELETE_RESULT:
       // Solution 1
       //   const id = 2;
