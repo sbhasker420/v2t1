@@ -13,11 +13,13 @@ const reducer = (state = initialState, action) => {
         results: state.results.concat({ id: new Date(), value: action.result }),
       };
     case actionTypes.DELETE_RESULT:
+      // Solution 1
       //   const id = 2;
       //   const updatedArray = [...state.results];
       //   updatedArray.splice(id, 1);
 
-      // filter returns a new array ...
+      // Solution 2
+      // filter returns a new array (newArray do not have the deleted element)...
       const updatedArray = state.results.filter(
         (result) => result.id !== action.deleteElementId
       );
